@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Light mode - Vibrant YouTube-inspired palette */
+    --background: 0.99 0 0;
+    --foreground: 0.15 0 0;
+    --card: 1 0 0;
+    --card-foreground: 0.15 0 0;
+    --popover: 1 0 0;
+    --popover-foreground: 0.15 0 0;
+
+    /* Primary: YouTube Red/Pink gradient start */
+    --primary: 0.55 0.22 15;
+    --primary-foreground: 0.99 0 0;
+
+    /* Secondary: Cool gray */
+    --secondary: 0.95 0.01 260;
+    --secondary-foreground: 0.15 0 0;
+
+    /* Muted */
+    --muted: 0.96 0.01 260;
+    --muted-foreground: 0.5 0.02 260;
+
+    /* Accent: Purple/Blue for creative tech feel */
+    --accent: 0.65 0.2 280;
+    --accent-foreground: 0.99 0 0;
+
+    /* Destructive */
+    --destructive: 0.55 0.24 25;
+    --destructive-foreground: 0.99 0 0;
+
+    /* Borders & inputs */
+    --border: 0.9 0.01 260;
+    --input: 0.9 0.01 260;
+    --ring: 0.55 0.22 15;
+
+    /* Charts */
+    --chart-1: 0.6 0.22 15;
+    --chart-2: 0.65 0.2 280;
+    --chart-3: 0.7 0.18 160;
+    --chart-4: 0.65 0.2 50;
+    --chart-5: 0.6 0.18 320;
+
+    /* Sidebar */
+    --sidebar: 0.99 0 0;
+    --sidebar-foreground: 0.15 0 0;
+    --sidebar-primary: 0.55 0.22 15;
+    --sidebar-primary-foreground: 0.99 0 0;
+    --sidebar-accent: 0.96 0.01 260;
+    --sidebar-accent-foreground: 0.15 0 0;
+    --sidebar-border: 0.9 0.01 260;
+    --sidebar-ring: 0.55 0.22 15;
+  }
+
+  .dark {
+    /* Dark mode - Deep, cinematic with vibrant accents */
+    --background: 0.12 0.01 260;
+    --foreground: 0.98 0.01 260;
+    --card: 0.16 0.01 260;
+    --card-foreground: 0.98 0.01 260;
+    --popover: 0.14 0.01 260;
+    --popover-foreground: 0.98 0.01 260;
+
+    /* Primary: Bright YouTube-inspired red/pink */
+    --primary: 0.65 0.24 15;
+    --primary-foreground: 0.98 0 0;
+
+    /* Secondary: Dark gray with slight blue tint */
+    --secondary: 0.22 0.02 260;
+    --secondary-foreground: 0.98 0.01 260;
+
+    /* Muted */
+    --muted: 0.2 0.02 260;
+    --muted-foreground: 0.65 0.02 260;
+
+    /* Accent: Vibrant purple for creative energy */
+    --accent: 0.7 0.22 280;
+    --accent-foreground: 0.98 0 0;
+
+    /* Destructive */
+    --destructive: 0.6 0.26 25;
+    --destructive-foreground: 0.98 0 0;
+
+    /* Borders & inputs - subtle with transparency */
+    --border: 1 0 0 / 12%;
+    --input: 1 0 0 / 18%;
+    --ring: 0.65 0.24 15;
+
+    /* Charts - vibrant and distinct */
+    --chart-1: 0.65 0.24 15;
+    --chart-2: 0.7 0.22 280;
+    --chart-3: 0.75 0.2 160;
+    --chart-4: 0.7 0.22 50;
+    --chart-5: 0.65 0.2 320;
+
+    /* Sidebar */
+    --sidebar: 0.14 0.01 260;
+    --sidebar-foreground: 0.98 0.01 260;
+    --sidebar-primary: 0.65 0.24 15;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.2 0.02 260;
+    --sidebar-accent-foreground: 0.98 0.01 260;
+    --sidebar-border: 1 0 0 / 12%;
+    --sidebar-ring: 0.65 0.24 15;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/30;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
